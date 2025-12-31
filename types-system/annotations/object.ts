@@ -10,4 +10,10 @@ const cleint = {
     this.BMI = mass / (height * height);
   },
 };
-const { id }: { id: string } = cleint;
+const { id }: { id: string; age: number } = cleint;
+
+const {
+  condition: { mass, height },
+}: {
+  condition: { mass: number; height: number };
+} = cleint;
