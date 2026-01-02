@@ -1,10 +1,6 @@
-// Basic syntx with interfaces 
+// Basic syntx with interfaces
 
-interface Movie {
-  title: string;
-  date: Date;
-  rating: number;
-  genre: string[];
+interface Detail {
   report(): string;
 }
 
@@ -19,9 +15,20 @@ const currentMovie = {
   },
 };
 
-const logMovie = (movie: Movie): void => {
-  console.log(movie.report());
+const track = {
+  genre: "rock",
+  exclusive: true,
+  duration: 129,
+
+  report(): string {
+    return `current song: ${this.genre}`;
+  },
 };
-logMovie(currentMovie);
 
+const logDetails = (item: Detail): void => {
+  console.log(item.report());
+};
 
+// these are generic functions whhich is more reusable qutes
+logDetails(currentMovie);
+logDetails(track);

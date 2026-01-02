@@ -1,4 +1,4 @@
-const track = {
+const Track = {
   genre: "rock",
   exclusive: false,
   duration: 120,
